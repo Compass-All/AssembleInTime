@@ -4,5 +4,7 @@
 .type hello, "function"
 // u64 hello();
 hello:
-     adr x0, .
+     nop
+     nop
+     nop
      ret

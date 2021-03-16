@@ -10,7 +10,7 @@ TMP_OBJ = $(SRC:.c=.o)
 OBJ = $(TMP_OBJ:.S=.o)
 EXEC = main
 
-all: $(EXEC)
+all: $(EXEC) asm
 
 $(EXEC): $(OBJ)
 	$(CC) $(CPPFLAGS) -o $@ $(OBJ)
