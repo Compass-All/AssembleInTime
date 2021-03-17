@@ -4,6 +4,7 @@ CPPFLAGS = -g
 LKFLAGS = -T layout.lds -L/usr/lib/aarch64-linux-gnu/ -lc
 
 SRC = main.c
+SRC += utils.c
 SRC += controller.S
 
 # static = yes
