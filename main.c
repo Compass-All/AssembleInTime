@@ -11,11 +11,11 @@ void print_x20()
         : "=r"(x20_reg));
     printf("x20_reg = %lld \n", x20_reg);
 }
-
+int main() __attribute__((section(".text.init")));
 int main()
 {
     u32 *ptr = malloc(0x1000);
-    mprotect((u64)ptr & 0xfffffffffffff000, 0x1000, PROT_EXEC | PROT_READ | PROT_WRITE);
+    mprotect((void *)((u64)ptr & 0xfffffffffffff000), 0x1000, PROT_EXEC | PROT_READ | PROT_WRITE);
     u32 instruct;
 
     while (~scanf("%x", &instruct))
