@@ -13,4 +13,11 @@ int main() __attribute__((section(".text.init")));
 
 int __placeholder() __attribute__((section(".text.execution")));
 
+int __placeholder()
+{
+    // DONT DELETE IT !!!!
+    // prevent linker optimizing the memory layout
+    return 0;
+}
+
 #endif // __MAIN_H_

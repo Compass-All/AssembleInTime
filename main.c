@@ -4,13 +4,6 @@ extern u64 hello();
 extern u32 _execution_start;
 extern u32 _execution_end;
 
-int __placeholder()
-{
-    // DONT DELETE IT !!!!
-    // prevent linker optimizing the memory layout
-    return 0;
-}
-
 int main()
 {
     u32 *ptr = &_execution_start;
