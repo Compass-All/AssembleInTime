@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <sys/mman.h>
 
+#include "include/typedef.h"
 #include "utils.h"
 
 int main() __attribute__((section(".text.init")));

@@ -2,10 +2,7 @@
 #define __UTILS_H_
 
 #include <stdio.h>
-#include "main.h"
-
-typedef unsigned long long u64;
-typedef unsigned int u32;
+#include "include/typedef.h"
 
 u64 read_reg_x20();
 int set_reg_x20(u64);
