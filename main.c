@@ -25,7 +25,7 @@ int main()
     printf("%d, %d", mprotect_ret, errno);
     printf("\n");
     u32 instruct;
-
+  
     set_reg_x20(0xdeedbeef);
     printf("x20 = 0x%x\n", read_reg_x20());
 

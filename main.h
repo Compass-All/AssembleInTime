@@ -19,5 +19,4 @@ int __placeholder()
     // prevent linker optimizing the memory layout
     return 0;
 }
-
 #endif // __MAIN_H_
