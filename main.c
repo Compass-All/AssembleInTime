@@ -4,15 +4,19 @@ extern u64 hello();
 extern u32 _execution_start;
 extern u32 _execution_end;
 
-int __placeholder()
-{
-    // DONT DELETE IT !!!!
-    // prevent linker optimizing the memory layout
-    return 0;
-}
-
 int main()
 {
+    static int _runOnce = 0;
+
+    if (!_runOnce)
+    {
+        _runOnce = 1;
+    }
+    else
+    {
+        exit(0); // temporary fix of endless execution
+    }
+
     u32 *ptr = &_execution_start;
     printf(".text.execution: (%x, %x)\n", &_execution_start, &_execution_end);
 
@@ -21,7 +25,7 @@ int main()
     printf("%d, %d", mprotect_ret, errno);
     printf("\n");
     u32 instruct;
-
+  
     set_reg_x20(0xdeedbeef);
     printf("x20 = 0x%x\n", read_reg_x20());
 

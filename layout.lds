@@ -4,11 +4,7 @@ SECTIONS
 {
   . = 0x8048000;
   _start = .;
-  .text : { 
-    *(.text.init)
-    . = ALIGN(0x1000);
-    *(.text)
-  }
+  .text : { *(.text) }
   . = 0x9000000;
   _execution_start = .;
   .text.execution : {
