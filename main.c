@@ -6,6 +6,17 @@ extern u32 _execution_end;
 
 int main()
 {
+    static int _runOnce = 0;
+
+    if (!_runOnce)
+    {
+        _runOnce = 1;
+    }
+    else
+    {
+        exit(0); // temporary fix of endless execution
+    }
+
     u32 *ptr = &_execution_start;
     printf(".text.execution: (%x, %x)\n", &_execution_start, &_execution_end);
 

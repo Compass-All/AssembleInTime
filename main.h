@@ -9,7 +9,7 @@
 #include "include/typedef.h"
 #include "utils.h"
 
-int main() __attribute__((section(".text.init")));
+int main();
 
 int __placeholder() __attribute__((section(".text.execution")));
 
