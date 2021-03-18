@@ -7,14 +7,6 @@ SRC = main.c
 SRC += utils.c
 SRC += controller.S
 
-# static = yes
-
-# ifdef static
-# 	CPPFLAGS += -static -no-pie -nostdlib -lc -l/usr/lib/aarch64-linux-gnu/libc.a
-# else
-# 	LKFLAGS += --dynamic-linker /usr/lib/aarch64-linux-gnu/libc-2.28.so /usr/lib/aarch64-linux-gnu/libc.a 
-# endif
-
 # These are the automatic generated variables
 TMP_OBJ = $(SRC:.c=.o)
 OBJ = $(TMP_OBJ:.S=.o)
